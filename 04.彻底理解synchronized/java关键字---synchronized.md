@@ -32,7 +32,7 @@
 在java代码中使用synchronized可是使用在代码块和方法中，根据Synchronized用的位置可以有这些使用场景：
 
 
-![Synchronized的使用场景](Synchronized的使用场景.png)
+![Synchronized的使用场景](https://github.com/Smilence7/Java-concurrency/blob/master/04.%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3synchronized/synchronized%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF.png)
 
 
 如图，synchronized可以用在**方法**上也可以使用在**代码块**中，其中方法是实例方法和静态方法分别锁的是该类的实例对象和该类的对象。而使用在代码块中也可以分为三种，具体的可以看上面的表格。这里的需要注意的是：**如果锁的是类对象的话，尽管new多个实例对象，但他们仍然是属于同一个类依然会被锁住，即线程之间保证同步关系**。

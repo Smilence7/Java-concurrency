@@ -128,7 +128,7 @@ ThreadLocalMap是threadLocal一个静态内部类，和大多数容器一样内�
 	    }
 	}
 
-Entry是一个以ThreadLocal为key,Object为value的键值对，另外需要注意的是这里的**threadLocal是弱引用，因为Entry继承了WeakReference，在Entry的构造方法中，调用了super(k)方法就会将threadLocal实例包装成一个WeakReferenece。**到这里我们可以用一个图(下图来自http://blog.xiaohansong.com/2016/08/06/ThreadLocal-memory-leak/)来理解下thread,threadLocal,threadLocalMap，Entry之间的关系：
+Entry是一个以ThreadLocal为key,Object为value的键值对，另外需要注意的是这里的**threadLocal是弱引用，因为Entry继承了WeakReference，在Entry的构造方法中，调用了super(k)方法就会将threadLocal实例包装成一个WeakReferenece。** 到这里我们可以用一个图(下图来自[blog.xiaohansong.com]http://blog.xiaohansong.com/2016/08/06/ThreadLocal-memory-leak/)来理解下thread,threadLocal,threadLocalMap，Entry之间的关系：
 
 ![ThreadLocal各引用间的关系](http://upload-images.jianshu.io/upload_images/2615789-12aef2e6ff040cae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/610)
 
